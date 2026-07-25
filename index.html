@@ -607,23 +607,23 @@
       <!-- Featured couple -->
       <div class="mb-10 reveal">
         <div class="relative overflow-hidden" style="aspect-ratio:16/7;">
-          <img
-            src="https://images.unsplash.com/photo-1529636444744-adffc9135a5e?auto=format&fit=crop&w=1600&q=80"
-            alt="Timofey and Yefrosinya wedding film — Sacramento wedding videography by New Legacy Films"
+          <video
+            src="https://pub-8dd12e2565f3410e937a8974cba4e7b7.r2.dev/videos/Timofey-Yefrosinya-Wedding.mp4"
             class="w-full h-full object-cover"
-            style="filter:brightness(0.8) sepia(0.2);"
-            loading="lazy"
-          />
-          <div style="position:absolute; inset:0; background:linear-gradient(180deg, transparent 30%, rgba(20,18,16,0.85) 100%);"></div>
+            style="filter:brightness(0.9) sepia(0.12);"
+            playsinline preload="metadata"
+            onloadedmetadata="this.currentTime=1;"
+            onplay="var b=this.parentElement.querySelector('.feat-playbtn'); b.style.opacity='0'; b.style.pointerEvents='none';"
+            onpause="var b=this.parentElement.querySelector('.feat-playbtn'); b.style.opacity='1'; b.style.pointerEvents='auto';"
+            onended="this.dataset.started='';this.currentTime=1;"
+          ></video>
+          <div style="position:absolute; inset:0; background:linear-gradient(180deg, transparent 30%, rgba(20,18,16,0.85) 100%); pointer-events:none;"></div>
           <!-- Play button -->
-          <div class="absolute inset-0 flex items-center justify-center">
-            <div class="w-20 h-20 rounded-full flex items-center justify-center cursor-pointer" style="background:rgba(201,169,110,0.15); border:1px solid rgba(201,169,110,0.5); backdrop-filter:blur(4px); transition:all 0.3s ease;" onmouseover="this.style.background='rgba(201,169,110,0.3)'" onmouseout="this.style.background='rgba(201,169,110,0.15)'">
+          <div class="feat-playbtn absolute inset-0 flex items-center justify-center cursor-pointer" style="transition:opacity 0.3s ease;"
+               onclick="var v=this.parentElement.querySelector('video'); if(!v.dataset.started){v.currentTime=0;v.dataset.started='1';} v.controls=true; v.play();">
+            <div class="w-20 h-20 rounded-full flex items-center justify-center" style="background:rgba(201,169,110,0.15); border:1px solid rgba(201,169,110,0.5); backdrop-filter:blur(4px); transition:all 0.3s ease;" onmouseover="this.style.background='rgba(201,169,110,0.3)'" onmouseout="this.style.background='rgba(201,169,110,0.15)'">
               <div style="width:0; height:0; border-left:22px solid #c9a96e; border-top:13px solid transparent; border-bottom:13px solid transparent; margin-left:5px;"></div>
             </div>
-          </div>
-          <div class="absolute bottom-8 left-8">
-            <div style="font-family:'Great Vibes',cursive; font-size:2.5rem; color:#c9a96e; line-height:1;">Timofey &amp; Yefrosinya</div>
-            <div style="font-size:0.6rem; letter-spacing:0.25em; text-transform:uppercase; color:rgba(212,200,184,0.7); margin-top:0.4rem;">Sacramento, California &nbsp;·&nbsp; 2025</div>
           </div>
         </div>
       </div>
@@ -965,35 +965,36 @@
       </div>
 
       <!-- Form -->
-      <div class="reveal" style="background:rgba(20,18,14,0.85); border:1px solid rgba(201,169,110,0.15); padding:3rem 2.5rem; backdrop-filter:blur(10px);">
+      <form id="inquiry-form" action="https://formspree.io/f/xaqrlqrr" method="POST" class="reveal" style="background:rgba(20,18,14,0.85); border:1px solid rgba(201,169,110,0.15); padding:3rem 2.5rem; backdrop-filter:blur(10px);">
         <div class="grid sm:grid-cols-2 gap-6 mb-6">
           <div>
             <label style="font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(201,169,110,0.7); display:block; margin-bottom:0.6rem;">Your Name</label>
-            <input type="text" placeholder="First &amp; Last Name" class="form-input w-full px-4 py-3.5" style="font-size:0.85rem;" />
+            <input type="text" name="name" required placeholder="First &amp; Last Name" class="form-input w-full px-4 py-3.5" style="font-size:0.85rem;" />
           </div>
           <div>
             <label style="font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(201,169,110,0.7); display:block; margin-bottom:0.6rem;">Email Address</label>
-            <input type="email" placeholder="your@email.com" class="form-input w-full px-4 py-3.5" style="font-size:0.85rem;" />
+            <input type="email" name="email" required placeholder="your@email.com" class="form-input w-full px-4 py-3.5" style="font-size:0.85rem;" />
           </div>
           <div>
             <label style="font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(201,169,110,0.7); display:block; margin-bottom:0.6rem;">Wedding Date</label>
-            <input type="text" placeholder="Month Day, Year" class="form-input w-full px-4 py-3.5" style="font-size:0.85rem;" />
+            <input type="text" name="wedding_date" placeholder="Month Day, Year" class="form-input w-full px-4 py-3.5" style="font-size:0.85rem;" />
           </div>
           <div>
             <label style="font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(201,169,110,0.7); display:block; margin-bottom:0.6rem;">Wedding Location</label>
-            <input type="text" placeholder="City, Venue, or Destination" class="form-input w-full px-4 py-3.5" style="font-size:0.85rem;" />
+            <input type="text" name="wedding_location" placeholder="City, Venue, or Destination" class="form-input w-full px-4 py-3.5" style="font-size:0.85rem;" />
           </div>
         </div>
         <div class="mb-6">
           <label style="font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(201,169,110,0.7); display:block; margin-bottom:0.6rem;">Tell Us Your Story</label>
-          <textarea rows="5" placeholder="Share a few details about your wedding day, what you're envisioning, and any questions you have..." class="form-input w-full px-4 py-3.5 resize-none" style="font-size:0.85rem;"></textarea>
+          <textarea name="message" required rows="5" placeholder="Share a few details about your wedding day, what you're envisioning, and any questions you have..." class="form-input w-full px-4 py-3.5 resize-none" style="font-size:0.85rem;"></textarea>
         </div>
         <div class="text-center">
           <button type="submit" class="btn-primary px-14 py-4 inline-block w-full sm:w-auto" style="cursor:pointer; border:none;">
             <span>Send Your Inquiry</span>
           </button>
+          <div id="form-status" style="display:none; margin-top:1.25rem; font-size:0.85rem; letter-spacing:0.03em;"></div>
         </div>
-      </div>
+      </form>
 
       <!-- Contact details -->
       <div class="reveal mt-14 text-center">
@@ -1156,6 +1157,40 @@
         heroImg.style.transform = `translateY(${scrollY * 0.3}px)`;
       }
     }, { passive: true });
+
+    // ── Inquiry form (Formspree AJAX) ──
+    const inquiryForm = document.getElementById('inquiry-form');
+    if (inquiryForm) {
+      const statusEl = document.getElementById('form-status');
+      inquiryForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const btn = inquiryForm.querySelector('button[type="submit"]');
+        btn.disabled = true;
+        statusEl.style.display = 'none';
+        try {
+          const res = await fetch(inquiryForm.action, {
+            method: 'POST',
+            body: new FormData(inquiryForm),
+            headers: { 'Accept': 'application/json' }
+          });
+          if (res.ok) {
+            inquiryForm.reset();
+            statusEl.textContent = "Thank you — your inquiry has been sent. We'll be in touch within 48 hours.";
+            statusEl.style.color = '#e8c990';
+          } else {
+            const json = await res.json().catch(() => ({}));
+            statusEl.textContent = (json.errors && json.errors.map(x => x.message).join(', ')) || 'Something went wrong. Please try again or email us directly.';
+            statusEl.style.color = '#e08a8a';
+          }
+        } catch (err) {
+          statusEl.textContent = 'Network error. Please check your connection and try again.';
+          statusEl.style.color = '#e08a8a';
+        } finally {
+          statusEl.style.display = 'block';
+          btn.disabled = false;
+        }
+      });
+    }
   </script>
 
 </body>
