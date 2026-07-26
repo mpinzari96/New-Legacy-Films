@@ -11,6 +11,11 @@
   <meta property="og:type" content="website" />
   <link rel="canonical" href="https://www.newlegacyfilms.com/" />
 
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -208,14 +213,6 @@
 
     /* ── Portfolio hover ── */
     .portfolio-item { overflow: hidden; position: relative; }
-    .portfolio-item img { transition: transform 0.7s ease; }
-    .portfolio-item:hover img { transform: scale(1.06); }
-    .portfolio-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(180deg, transparent 40%, rgba(20,18,16,0.85) 100%);
-      opacity: 0; transition: opacity 0.4s ease;
-    }
-    .portfolio-item:hover .portfolio-overlay { opacity: 1; }
 
     /* ── Testimonial ── */
     .testimonial-card {
@@ -302,19 +299,6 @@
     }
     .area-tag:hover { border-color: #c9a96e; color: #c9a96e; }
 
-    /* ── Section numbering ── */
-    .section-num {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 5rem;
-      font-weight: 300;
-      color: rgba(201,169,110,0.06);
-      line-height: 1;
-      position: absolute;
-      top: -1rem; left: -1rem;
-      pointer-events: none;
-      user-select: none;
-    }
-
     /* Mobile nav */
     #mobile-menu { transition: max-height 0.4s ease, opacity 0.4s ease; }
 
@@ -337,7 +321,7 @@
 
         <!-- Logo -->
         <a href="#home" class="flex items-center gap-3 group">
-          <div class="logo-circle group-hover:border-gold transition-all duration-300">LN</div>
+          <div class="logo-circle group-hover:border-gold transition-all duration-300">NL</div>
           <div class="hidden sm:block">
             <div style="font-family:'Jost',sans-serif; font-weight:200; font-size:0.6rem; letter-spacing:0.35em; text-transform:uppercase; color:#c9a96e;">New Legacy</div>
             <div style="font-family:'Jost',sans-serif; font-weight:200; font-size:0.6rem; letter-spacing:0.35em; text-transform:uppercase; color:#d4c8b8;">Films</div>
@@ -384,7 +368,7 @@
     <!-- Background image -->
     <div class="absolute inset-0">
       <img
-        src="images/hero.png"
+        src="images/5.jpg"
         alt="Sacramento wedding couple holding hands at golden hour in a garden — New Legacy Films"
         class="w-full h-full object-cover object-center parallax-img"
         id="hero-img"
@@ -474,7 +458,7 @@
         <div class="reveal relative">
           <div class="relative" style="aspect-ratio:4/5;">
             <img
-              src="images/about.png"
+              src="images/1.jpg"
               alt="Bride and groom kissing under her veil — New Legacy Films wedding photography"
               class="w-full h-full object-cover object-center"
               style="filter:brightness(0.95) sepia(0.1);"
@@ -499,9 +483,6 @@
           <div class="gold-rule mb-8" style="margin-left:0;"></div>
           <p class="text-mist font-sans font-light leading-relaxed mb-6" style="font-size:0.95rem;">
             New Legacy Films is a <strong class="text-gold-pale font-normal">Sacramento-based wedding videography studio</strong>, passionate about telling love stories through timeless imagery. We capture the emotion, beauty, and meaningful details of your day so you can relive every feeling for years to come.
-          </p>
-          <p class="text-mist font-sans font-light leading-relaxed mb-6" style="font-size:0.95rem;">
-            Our approach is quiet and observant. We move through your day like guests who happen to carry a camera, catching the unguarded moments — the way your hands shake as you read your vows, the laughter that breaks through the tears. Every wedding film we create is crafted with care long after the last dance.
           </p>
           <p class="text-mist font-sans font-light leading-relaxed mb-6" style="font-size:0.95rem;">
             Our approach is quiet and observant. We move through your day like guests who happen to carry a camera, catching the unguarded moments — the quiet glances, joyful tears, and heartfelt laughter that make your wedding uniquely yours. Each wedding film is carefully crafted to preserve not only how your day looked, but how it felt.
@@ -608,7 +589,7 @@
       <div class="mb-10 reveal">
         <div class="relative overflow-hidden" style="aspect-ratio:16/7;">
           <video
-            src="https://pub-8dd12e2565f3410e937a8974cba4e7b7.r2.dev/videos/Timofey-Yefrosinya-Wedding.mp4"
+            src="https://media.newlegacyfilms.studio/videos/Timofeyy-Yefrosinya-Wedding.mp4"
             class="w-full h-full object-cover"
             style="filter:brightness(0.9) sepia(0.12);"
             playsinline preload="metadata"
@@ -634,7 +615,7 @@
         <!-- Featured short film — R2 hosted -->
         <div class="portfolio-item reveal" style="aspect-ratio:9/16;">
           <video
-            src="https://pub-8dd12e2565f3410e937a8974cba4e7b7.r2.dev/1.mp4"
+            src="https://media.newlegacyfilms.studio/1.mp4"
             class="w-full h-full object-cover cursor-pointer"
             playsinline preload="metadata"
             onloadedmetadata="this.currentTime=0.2;"
@@ -654,7 +635,7 @@
         <!-- Short film 2 — R2 hosted -->
         <div class="portfolio-item reveal reveal-delay-1" style="aspect-ratio:9/16;">
           <video
-            src="https://pub-8dd12e2565f3410e937a8974cba4e7b7.r2.dev/2.mp4"
+            src="https://media.newlegacyfilms.studio/2.mp4"
             class="w-full h-full object-cover cursor-pointer"
             playsinline preload="metadata"
             onloadedmetadata="this.currentTime=0.2;"
@@ -674,7 +655,7 @@
         <!-- Short film 3 — R2 hosted -->
         <div class="portfolio-item reveal reveal-delay-2" style="aspect-ratio:9/16;">
           <video
-            src="https://pub-8dd12e2565f3410e937a8974cba4e7b7.r2.dev/3.mp4"
+            src="https://media.newlegacyfilms.studio/3.mp4"
             class="w-full h-full object-cover cursor-pointer"
             playsinline preload="metadata"
             onloadedmetadata="this.currentTime=5;"
@@ -694,7 +675,7 @@
         <!-- Short film 4 — R2 hosted -->
         <div class="portfolio-item reveal reveal-delay-3" style="aspect-ratio:9/16;">
           <video
-            src="https://pub-8dd12e2565f3410e937a8974cba4e7b7.r2.dev/4.mp4"
+            src="https://media.newlegacyfilms.studio/4.mp4"
             class="w-full h-full object-cover cursor-pointer"
             playsinline preload="metadata"
             onloadedmetadata="this.currentTime=0.2;"
@@ -714,7 +695,7 @@
         <!-- Short film 5 — R2 hosted -->
         <div class="portfolio-item reveal reveal-delay-4" style="aspect-ratio:9/16;">
           <video
-            src="https://pub-8dd12e2565f3410e937a8974cba4e7b7.r2.dev/5.mp4"
+            src="https://media.newlegacyfilms.studio/5.mp4"
             class="w-full h-full object-cover cursor-pointer"
             playsinline preload="metadata"
             onloadedmetadata="this.currentTime=5;"
@@ -731,13 +712,23 @@
           </div>
         </div>
 
-        <!-- Placeholder 5 -->
-        <div class="portfolio-item reveal reveal-delay-4" style="aspect-ratio:9/16; background:linear-gradient(160deg,#231e19,#141210); border:1px solid rgba(201,169,110,0.15);">
-          <div class="absolute inset-0 flex flex-col items-center justify-center gap-3">
-            <div class="w-14 h-14 rounded-full flex items-center justify-center" style="background:rgba(201,169,110,0.15); border:1px solid rgba(201,169,110,0.4);">
-              <div style="width:0;height:0;border-left:14px solid #c9a96e;border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px;"></div>
+        <!-- Short film 6 — R2 hosted -->
+        <div class="portfolio-item reveal reveal-delay-4" style="aspect-ratio:9/16;">
+          <video
+            src="https://media.newlegacyfilms.studio/6.mp4"
+            class="w-full h-full object-cover cursor-pointer"
+            muted playsinline preload="metadata"
+            onloadedmetadata="this.currentTime=0.6;"
+            onclick="if(this.paused){ if(!this.dataset.started){this.currentTime=0;this.dataset.started='1';} this.play(); } else { this.pause(); }"
+            onplay="this.nextElementSibling.style.opacity='0';"
+            onpause="this.nextElementSibling.style.opacity='1';"
+            onended="this.dataset.started='';this.currentTime=0.6;"
+          ></video>
+          <div class="video-play-btn absolute inset-0 flex items-center justify-center pointer-events-none" style="transition:opacity 0.3s ease;">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center"
+                 style="background:rgba(201,169,110,0.15); border:1px solid rgba(201,169,110,0.5); backdrop-filter:blur(4px);">
+              <div style="width:0;height:0;border-left:18px solid #c9a96e;border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:4px;"></div>
             </div>
-            <div style="font-family:'Cormorant Garamond',serif;font-size:0.8rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(212,200,184,0.7);">Coming Soon</div>
           </div>
         </div>
 
@@ -810,16 +801,12 @@
           <!-- Map placeholder -->
           <div class="mt-10 relative overflow-hidden" style="aspect-ratio:16/9; border:1px solid rgba(201,169,110,0.15);">
             <img
-              src="https://images.unsplash.com/photo-1476041800959-2f6bb412c8ce?auto=format&fit=crop&w=900&q=80"
-              alt="California wedding locations map — New Legacy Films Sacramento"
+              src="assets/areas-we-serve.png"
+              alt="California wedding locations — New Legacy Films Sacramento"
               class="w-full h-full object-cover"
               style="filter:brightness(0.5) sepia(0.3);"
               loading="lazy"
             />
-            <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-8">
-              <div class="font-display text-gold" style="font-size:clamp(1.5rem,3vw,2.2rem); font-weight:300;">Sacramento &amp; Beyond</div>
-              <div style="font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(212,200,184,0.7); margin-top:0.5rem;">Serving All of California &amp; Destination Weddings</div>
-            </div>
           </div>
         </div>
 
@@ -898,10 +885,10 @@
         <div class="testimonial-card p-8 reveal">
           <div class="font-display text-gold mb-4" style="font-size:3rem; line-height:1; opacity:0.4;">"</div>
           <p class="text-mist font-sans font-light leading-relaxed mb-8" style="font-size:0.88rem; line-height:1.9;">
-            We cried watching our film for the first time — and we've watched it a hundred times since. They captured moments we didn't even know were happening. Our Sacramento wedding film is our most treasured possession.
+            We couldn't be happier with our wedding film! The team captured every special moment so beautifully, and watching it takes us right back to our wedding day. They were professional, creative, and so easy to work with. If you're looking for someone to preserve your memories in a truly meaningful way, we highly recommend them. Thank you for giving us a film we'll cherish forever!
           </p>
           <div style="border-top:1px solid rgba(201,169,110,0.15); padding-top:1.25rem;">
-            <div class="font-display text-gold-pale" style="font-size:1rem; font-weight:400;">Sarah &amp; Michael</div>
+            <div class="font-display text-gold-pale" style="font-size:1rem; font-weight:400;">Tim &amp; Ella</div>
             <div style="font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(201,169,110,0.5); margin-top:0.25rem;">Sacramento, CA — 2024</div>
           </div>
         </div>
@@ -909,22 +896,22 @@
         <div class="testimonial-card p-8 reveal reveal-delay-2">
           <div class="font-display text-gold mb-4" style="font-size:3rem; line-height:1; opacity:0.4;">"</div>
           <p class="text-mist font-sans font-light leading-relaxed mb-8" style="font-size:0.88rem; line-height:1.9;">
-            We flew them out for our destination wedding in Italy and it was worth every penny. They're invisible on the day but the film feels like a feature movie. We would choose New Legacy Films again without hesitation.
+            We absolutely love our wedding film! Every special moment was filmed beautifully, and it brings back so many amazing memories. The team was professional, friendly, and a joy to work with. Highly recommend!
           </p>
           <div style="border-top:1px solid rgba(201,169,110,0.15); padding-top:1.25rem;">
-            <div class="font-display text-gold-pale" style="font-size:1rem; font-weight:400;">Priya &amp; James</div>
-            <div style="font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(201,169,110,0.5); margin-top:0.25rem;">Tuscany, Italy — 2024</div>
+            <div class="font-display text-gold-pale" style="font-size:1rem; font-weight:400;">Mark &amp; Olya</div>
+            <div style="font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(201,169,110,0.5); margin-top:0.25rem;">Roseville, CA — 2026</div>
           </div>
         </div>
 
         <div class="testimonial-card p-8 reveal reveal-delay-3">
           <div class="font-display text-gold mb-4" style="font-size:3rem; line-height:1; opacity:0.4;">"</div>
           <p class="text-mist font-sans font-light leading-relaxed mb-8" style="font-size:0.88rem; line-height:1.9;">
-            From Napa Valley wine country all the way to our friends in Sacramento who referred them — the word is out. These are the videographers you want at your California wedding. Absolute magic.
+            Our wedding film is absolutely stunning! The way they captured the beautiful ocean views, golden sunset, and every special moment made it feel like a movie. Every location looked incredible, and the final film exceeded all of our expectations. We couldn't be happier!
           </p>
           <div style="border-top:1px solid rgba(201,169,110,0.15); padding-top:1.25rem;">
-            <div class="font-display text-gold-pale" style="font-size:1rem; font-weight:400;">Elena &amp; David</div>
-            <div style="font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(201,169,110,0.5); margin-top:0.25rem;">Napa Valley, CA — 2026</div>
+            <div class="font-display text-gold-pale" style="font-size:1rem; font-weight:400;">David &amp; Melanie</div>
+            <div style="font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(201,169,110,0.5); margin-top:0.25rem;">Bay Area, CA — 2025</div>
           </div>
         </div>
 
@@ -1029,7 +1016,7 @@
         <!-- Logo + tagline -->
         <div class="text-center lg:text-left">
           <div class="flex items-center justify-center lg:justify-start gap-3 mb-5">
-            <div class="logo-circle">LN</div>
+            <div class="logo-circle">NL</div>
             <div>
               <div style="font-family:'Jost',sans-serif; font-weight:200; font-size:0.6rem; letter-spacing:0.35em; text-transform:uppercase; color:#c9a96e;">New Legacy</div>
               <div style="font-family:'Jost',sans-serif; font-weight:200; font-size:0.6rem; letter-spacing:0.35em; text-transform:uppercase; color:#d4c8b8;">Films</div>
@@ -1092,19 +1079,8 @@
        JAVASCRIPT
   ════════════════════════════════════════════ -->
   <script>
-    // ── Navbar scroll effect ──
+    // ── Navbar scroll effect ── (handled in the combined scroll listener below)
     const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 60) {
-        navbar.style.background = 'rgba(14,12,10,0.97)';
-        navbar.style.backdropFilter = 'blur(20px)';
-        navbar.style.borderBottom = '1px solid rgba(201,169,110,0.1)';
-      } else {
-        navbar.style.background = 'rgba(20,18,16,0)';
-        navbar.style.backdropFilter = 'blur(0px)';
-        navbar.style.borderBottom = 'none';
-      }
-    });
 
     // ── Mobile menu ──
     const hamburger = document.getElementById('hamburger');
@@ -1140,19 +1116,21 @@
 
     reveals.forEach(el => observer.observe(el));
 
-    // ── Portfolio caption fade ──
-    document.querySelectorAll('.portfolio-item').forEach(item => {
-      const caption = item.querySelector('.portfolio-caption');
-      if (caption) {
-        item.addEventListener('mouseenter', () => caption.style.opacity = '1');
-        item.addEventListener('mouseleave', () => caption.style.opacity = '0');
-      }
-    });
-
-    // ── Subtle hero parallax ──
+    // ── Combined scroll handler: navbar effect + subtle hero parallax ──
     const heroImg = document.getElementById('hero-img');
     window.addEventListener('scroll', () => {
       const scrollY = window.scrollY;
+
+      if (scrollY > 60) {
+        navbar.style.background = 'rgba(14,12,10,0.97)';
+        navbar.style.backdropFilter = 'blur(20px)';
+        navbar.style.borderBottom = '1px solid rgba(201,169,110,0.1)';
+      } else {
+        navbar.style.background = 'rgba(20,18,16,0)';
+        navbar.style.backdropFilter = 'blur(0px)';
+        navbar.style.borderBottom = 'none';
+      }
+
       if (scrollY < window.innerHeight && heroImg) {
         heroImg.style.transform = `translateY(${scrollY * 0.3}px)`;
       }
